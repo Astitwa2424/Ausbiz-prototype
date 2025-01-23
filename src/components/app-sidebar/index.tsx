@@ -28,7 +28,10 @@ const items = [
     title: 'About Us',
     icon: Info,
     items: [
-      { title: 'Company Profile', url: '#company-profile' },
+      {
+        title: 'Company Profile',
+        url: 'https://ausbiz-prototype.vercel.app/about-ausbiz-consulting',
+      },
       { title: 'Team', url: '#team' },
       { title: 'Academic Partners', url: '#academic-partners' },
       { title: 'Testimonials', url: 'https://tech-bootcamp.vercel.app/' },
@@ -40,17 +43,17 @@ const items = [
     items: [
       { title: 'On-site', url: '#on-site' },
       { title: 'Remote', url: '#remote' },
-      { title: 'Tech Bootcamp', url: '#tech-bootcamp' },
+      { title: 'Tech Bootcamp', url: 'https://tech-bootcamp.vercel.app/' },
     ],
   },
   {
     title: 'Services',
-    url: 'https://ausbiz-prototype-4yqmzarub-astitwa2424s-projects.vercel.app/our-services',
+    url: 'https://ausbiz-prototype.vercel.app/our-services',
     icon: Briefcase,
   },
   {
     title: 'Contact Us',
-    url: 'https://ausbiz-prototype-4yqmzarub-astitwa2424s-projects.vercel.app/contact-us',
+    url: 'https://ausbiz-prototype.vercel.app/contact-us',
     icon: Mail,
   },
 ]
