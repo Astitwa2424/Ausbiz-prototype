@@ -115,8 +115,8 @@ html {
   opacity: 0;
 }
 
-html[data-theme="dark"],
-html[data-theme="light"] {
+html[data-theme="light"],
+html[data-theme="dark"] {
   opacity: initial;
 }
 

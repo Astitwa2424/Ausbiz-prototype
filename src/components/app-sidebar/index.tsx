@@ -17,6 +17,7 @@ import {
   SidebarFooter,
 } from '@/components/ui/sidebar'
 import { useState } from 'react'
+import { ThemeSelector } from 'src/providers/Theme/ThemeSelector'
 
 const items = [
   {
@@ -66,7 +67,7 @@ export function AppSidebar() {
         <SidebarGroup>
           <SidebarGroupLabel className="p-4 flex justify-center mb-4">
             <img
-              src="https://media.licdn.com/dms/image/v2/C4E0BAQGKGA1GyNOftw/company-logo_200_200/company-logo_200_200/0/1658570032831?e=1745452800&v=beta&t=8GmNYzt9ewLfInUJno9CrZDEQdZabNJJL17_OeBsDdI"
+              src="https://media.licdn.com/dms/image/v2/C4E0BAQGKGA1GyNOftw/company-logo_200_200/company-logo_200_200/0/1658570032831?e=1746057600&v=beta&t=2VIef2LzADJ_qnbzablocf0YNtDgwIjJBovSYltzYQw"
               alt="Ausbiz Consulting Logo"
               className="w-16 h-16 object-cover rounded-full"
             />
@@ -126,10 +127,7 @@ export function AppSidebar() {
         </SidebarGroup>
       </SidebarContent>
       <SidebarFooter className="border-t border-gray-800 p-4">
-        <button className="flex items-center gap-2 text-gray-300 hover:text-white w-full">
-          <Moon className="h-5 w-5" />
-          <span>Toggle theme</span>
-        </button>
+        <ThemeSelector />
       </SidebarFooter>
     </Sidebar>
   )
