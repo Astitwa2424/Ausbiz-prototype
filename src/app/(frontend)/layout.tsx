@@ -4,7 +4,7 @@ import { draftMode } from 'next/headers'
 import { cn } from '@/utilities/ui'
 import { GeistMono } from 'geist/font/mono'
 import { GeistSans } from 'geist/font/sans'
-
+import ServicesGrid from '@/components/servicesgrid'
 import { AdminBar } from '@/components/AdminBar'
 import { Footer } from '@/Footer/Component'
 import { Header } from '@/Header/Component'
@@ -14,8 +14,8 @@ import { mergeOpenGraph } from '@/utilities/mergeOpenGraph'
 import { getServerSideURL } from '@/utilities/getURL'
 import { SidebarProvider, SidebarTrigger } from '@/components/ui/sidebar'
 import { AppSidebar } from '@/components/app-sidebar'
-
 import './globals.css'
+import TrainingSection from '@/components/training-section'
 
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
   const { isEnabled } = await draftMode()
@@ -38,8 +38,11 @@ export default async function RootLayout({ children }: { children: React.ReactNo
             <AppSidebar />
             <main>
               <SidebarTrigger />
+
               <Header />
               {children}
+              <ServicesGrid />
+              <TrainingSection />
               <Footer />
             </main>
           </SidebarProvider>
