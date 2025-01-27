@@ -27,7 +27,7 @@ const testimonials = [
     text: 'This is a test testimonial This is a test testimonial This is a test testimonial This is a test testimonial This is a test testimonial This is a test testimonial',
     name: 'Name',
     designation: 'Designation',
-    image: '/testimonial-1.jpg', // Can be replaced with URL
+    image: '/media/callum.jpg', // Can be replaced with URL
   },
   {
     text: 'This is a test testimonial This is a test testimonial This is a test testimonial This is a test testimonial This is a test testimonial This is a test testimonial',
