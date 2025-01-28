@@ -17,7 +17,7 @@ const services: Service[] = [
     title: 'Cloud Strategy & AWS Solutions',
     description:
       'Our serverless solutions using AWS Lambda, API Gateway, and Amplify enhance scalability and reduce costs.',
-    link: '#',
+    link: 'https://ausbiz-prototype.vercel.app/our-services',
   },
   {
     image:
@@ -25,7 +25,7 @@ const services: Service[] = [
     title: 'Tech Transformation & Advisory',
     description:
       'We provide Business Analysis, Agile Project Management, and Change Management to ensure successful implementation',
-    link: '#',
+    link: 'https://ausbiz-prototype.vercel.app/our-services',
   },
   {
     image:
@@ -33,7 +33,7 @@ const services: Service[] = [
     title: 'Full-Stack Development',
     description:
       'Create robust and scalable applications using React.js, Next.js 15, Vercel, and Prisma ORM',
-    link: '#',
+    link: 'https://ausbiz-prototype.vercel.app/our-services',
   },
   {
     image:
@@ -41,7 +41,7 @@ const services: Service[] = [
     title: 'Data & AI Solutions',
     description:
       'Leverage AI-Driven Analytics and Synthetic Data to boost machine learning capabilities while ensuring data privacy.',
-    link: '#',
+    link: 'https://ausbiz-prototype.vercel.app/our-services',
   },
   {
     image:
@@ -49,7 +49,7 @@ const services: Service[] = [
     title: 'Cybersecurity',
     description:
       'We ensure compliance, mitigate data breaches, and reduce insurance premiums through robust security frameworks',
-    link: '#',
+    link: 'https://ausbiz-prototype.vercel.app/our-services',
   },
 ]
 

@@ -2,22 +2,26 @@ import { Card, CardContent } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import { Check, Linkedin, BookOpen, Video, Laptop } from 'lucide-react'
 import Link from 'next/link'
+import { link } from 'fs'
 
 const trainingOptions = [
   {
     title: 'On-Site Training',
     description: '2-Day Intensive Workshops',
     icon: BookOpen,
+    link: 'https://ausbiz-prototype.vercel.app/on-site-training-',
   },
   {
     title: 'Remote Training',
     description: '1-Hour Weekly Sessions Over 6 Weeks',
     icon: Video,
+    link: 'https://ausbiz-prototype.vercel.app/remote-training',
   },
   {
     title: 'Tech Bootcamp',
     description: '4 Weeks Training and 6 weeks Internship',
     icon: Laptop,
+    link: 'https://tech-bootcamp.vercel.app/',
   },
 ]
 
@@ -93,7 +97,7 @@ export default function TrainingSection() {
             initiatives and drive your business forward with our tailored training programs.
           </p>
           <Button asChild size="lg" className="mt-4">
-            <Link href="/contact">Get Started</Link>
+            <Link href="https://ausbiz-prototype.vercel.app/contact-us">Get Started</Link>
           </Button>
 
           <div className="flex flex-col md:flex-row items-center justify-between mt-12 gap-4">

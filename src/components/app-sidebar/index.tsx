@@ -22,7 +22,7 @@ import { ThemeSelector } from 'src/providers/Theme/ThemeSelector'
 const items = [
   {
     title: 'Home',
-    url: 'https://ausbiz-prototype.vercel.app/',
+    url: 'https://ausbiz-prototype.vercel.app/home',
     icon: Home,
   },
   {
