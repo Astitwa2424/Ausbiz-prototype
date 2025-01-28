@@ -23,9 +23,10 @@ const trainingOptions = [
 
 const testimonials = [
   {
-    text: "The training provided by AusBiz Consulting was instrumental in advancing our team's skills.",
-    name: 'Alex Johnson',
-    designation: 'CTO, TechCorp',
+    text: 'This is a test testimonial This is a test testimonial This is a test testimonial This is a test testimonial This is a test testimonial This is a test testimonial',
+    name: 'Name',
+    designation: 'Designation',
+    image: '/testimonial-1.jpg', // Can be replaced with URL
   },
   {
     text: 'Comprehensive and practical. The bootcamp exceeded our expectations in every way.',
