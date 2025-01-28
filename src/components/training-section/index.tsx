@@ -2,7 +2,6 @@ import { Card, CardContent } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import { Check, Linkedin, BookOpen, Video, Laptop } from 'lucide-react'
 import Link from 'next/link'
-import { link } from 'fs'
 
 const trainingOptions = [
   {
@@ -27,10 +26,9 @@ const trainingOptions = [
 
 const testimonials = [
   {
-    text: 'This is a test testimonial This is a test testimonial This is a test testimonial This is a test testimonial This is a test testimonial This is a test testimonial',
-    name: 'Name',
-    designation: 'Designation',
-    image: '/testimonial-1.jpg', // Can be replaced with URL
+    text: "The training provided by AusBiz Consulting was instrumental in advancing our team's skills.",
+    name: 'Alex Johnson',
+    designation: 'CTO, TechCorp',
   },
   {
     text: 'Comprehensive and practical. The bootcamp exceeded our expectations in every way.',
@@ -67,7 +65,9 @@ export default function TrainingSection() {
                 <div className="bg-primary/10 text-primary rounded-full p-1 mb-4">
                   <Check className="w-5 h-5" />
                 </div>
-                <Button variant="outline">Learn More</Button>
+                <Button variant="outline" asChild>
+                  <Link href={option.link}>Learn More</Link>
+                </Button>
               </CardContent>
             </Card>
           ))}
@@ -91,7 +91,7 @@ export default function TrainingSection() {
 
         {/* Footer CTA */}
         <div className="text-center space-y-6 py-12 border-t border-gray-200">
-          <h3 className="text-2xl font-semibold">Ready to elevate your team expertise?</h3>
+          <h3 className="text-2xl font-semibold">Ready to elevate your teams expertise?</h3>
           <p className="text-gray-600 max-w-2xl mx-auto">
             Contact us today to discuss how AusBiz Consulting can support your technology
             initiatives and drive your business forward with our tailored training programs.
