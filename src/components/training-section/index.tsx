@@ -1,108 +1,83 @@
 import { Card, CardContent } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
-import { Check, Linkedin } from 'lucide-react'
-import Image from 'next/image'
+import { Check, Linkedin, BookOpen, Video, Laptop } from 'lucide-react'
 import Link from 'next/link'
 
 const trainingOptions = [
   {
     title: 'On-Site Training',
-    description: '(2-Day Intensive Workshops)',
-    image: '/path-to-local-image.jpg', // Can be replaced with URL
+    description: '2-Day Intensive Workshops',
+    icon: BookOpen,
   },
   {
     title: 'Remote Training',
-    description: '(1-Hour Weekly Sessions Over 6 Weeks)',
-    image: 'https://example.com/remote-training.jpg', // Example of URL image
+    description: '1-Hour Weekly Sessions Over 6 Weeks',
+    icon: Video,
   },
   {
     title: 'Tech Bootcamp',
-    description: '(4 Weeks Training and 6 weeks Internship)',
-    image: '/another-local-image.png', // Can be replaced with URL
+    description: '4 Weeks Training and 6 weeks Internship',
+    icon: Laptop,
   },
 ]
 
 const testimonials = [
   {
-    text: 'This is a test testimonial This is a test testimonial This is a test testimonial This is a test testimonial This is a test testimonial This is a test testimonial',
-    name: 'Name',
-    designation: 'Designation',
-    image: '/testimonial-1.jpg', // Can be replaced with URL
+    text: "The training provided by AusBiz Consulting was instrumental in advancing our team's skills.",
+    name: 'Alex Johnson',
+    designation: 'CTO, TechCorp',
   },
   {
-    text: 'This is a test testimonial This is a test testimonial This is a test testimonial This is a test testimonial This is a test testimonial This is a test testimonial',
-    name: 'Name',
-    designation: 'Designation',
-    image: 'https://example.com/testimonial-2.jpg', // Example of URL image
+    text: 'Comprehensive and practical. The bootcamp exceeded our expectations in every way.',
+    name: 'Sarah Lee',
+    designation: 'HR Manager, InnovateCo',
   },
   {
-    text: 'This is a test testimonial This is a test testimonial This is a test testimonial This is a test testimonial This is a test testimonial This is a test testimonial',
-    name: 'Name',
-    designation: 'Designation',
-    image: '/testimonial-3.jpg', // Can be replaced with URL
+    text: 'The remote training option allowed our global team to participate and learn together.',
+    name: 'Michael Chen',
+    designation: 'Project Lead, GlobalTech',
   },
   {
-    text: 'This is a test testimonial This is a test testimonial This is a test testimonial This is a test testimonial This is a test testimonial This is a test testimonial',
-    name: 'Name',
-    designation: 'Designation',
-    image: 'https://example.com/testimonial-4.jpg', // Example of URL image
+    text: "AusBiz's on-site workshop transformed our approach to cloud solutions. Highly recommended!",
+    name: 'Emily Rodriguez',
+    designation: 'Cloud Architect, CloudSys',
   },
 ]
 
 export default function TrainingSection() {
   return (
-    <section className="w-full">
-      <div className="container px-4 md:px-6 py-12">
+    <section className="w-full py-16">
+      <div className="container px-4 md:px-6">
         {/* Training Header */}
-        <h2 className="text-3xl font-bold text-center mb-12">TRAINING</h2>
+        <h2 className="text-3xl font-bold text-center mb-12">Our Training Programs</h2>
 
         {/* Training Options */}
-        <div className="space-y-6 mb-12">
+        <div className="grid md:grid-cols-3 gap-8 mb-16">
           {trainingOptions.map((option, index) => (
-            <div key={index} className="flex items-center gap-4">
-              <div className="w-16 h-16 relative">
-                <Image
-                  src={option.image || '/placeholder.svg'}
-                  alt={option.title}
-                  layout="fill"
-                  objectFit="cover"
-                  className="rounded-full"
-                />
-              </div>
-              <div className="flex-1">
-                <span className="font-semibold">{option.title}</span>
-                <span className="ml-2 text-gray-600">{option.description}</span>
-              </div>
-              <div className="bg-black rounded-full p-1">
-                <Check className="w-5 h-5 text-white" />
-              </div>
-            </div>
+            <Card key={index} className="border border-gray-200">
+              <CardContent className="p-6 flex flex-col items-center text-center">
+                <option.icon className="w-12 h-12 mb-4 text-primary" />
+                <h3 className="text-xl font-semibold mb-2">{option.title}</h3>
+                <p className="text-gray-600 mb-4">{option.description}</p>
+                <div className="bg-primary/10 text-primary rounded-full p-1 mb-4">
+                  <Check className="w-5 h-5" />
+                </div>
+                <Button variant="outline">Learn More</Button>
+              </CardContent>
+            </Card>
           ))}
-          <Button variant="outline" className="ml-10">
-            Learn More
-          </Button>
         </div>
 
         {/* Testimonials */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+        <h3 className="text-2xl font-semibold text-center mb-8">What Our Clients Say</h3>
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
           {testimonials.map((testimonial, index) => (
             <Card key={index} className="border border-gray-200">
               <CardContent className="p-6">
-                <p className="text-sm mb-4 text-gray-600">{testimonial.text}</p>
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 relative">
-                    <Image
-                      src={testimonial.image || '/placeholder.svg'}
-                      alt={testimonial.name}
-                      layout="fill"
-                      objectFit="cover"
-                      className="rounded-full"
-                    />
-                  </div>
-                  <div>
-                    <p className="font-semibold">{testimonial.name}</p>
-                    <p className="text-sm text-gray-600">{testimonial.designation}</p>
-                  </div>
+                <p className="text-sm mb-4 text-gray-600 italic">&quot;{testimonial.text}&quot;</p>
+                <div>
+                  <p className="font-semibold">{testimonial.name}</p>
+                  <p className="text-sm text-gray-600">{testimonial.designation}</p>
                 </div>
               </CardContent>
             </Card>
@@ -111,41 +86,32 @@ export default function TrainingSection() {
 
         {/* Footer CTA */}
         <div className="text-center space-y-6 py-12 border-t border-gray-200">
-          <h3 className="text-xl font-semibold">
-            Ready to leverage our expertise in these technologies?
-          </h3>
-          <p className="text-gray-600">
-            <Link href="/contact" className="underline hover:text-black">
-              Contact Us
-            </Link>{' '}
-            today to discuss how AusBiz Consulting can support your technology initiatives and drive
-            your business forward.
+          <h3 className="text-2xl font-semibold">Ready to elevate your team expertise?</h3>
+          <p className="text-gray-600 max-w-2xl mx-auto">
+            Contact us today to discuss how AusBiz Consulting can support your technology
+            initiatives and drive your business forward with our tailored training programs.
           </p>
+          <Button asChild size="lg" className="mt-4">
+            <Link href="/contact">Get Started</Link>
+          </Button>
 
-          <div className="flex items-center justify-between mt-8">
-            <div className="relative w-[150px] h-[50px]">
-              <Image
-                src="/path-to-your-logo.png" // Can be replaced with URL
-                alt="AusBiz Consulting"
-                layout="fill"
-                objectFit="contain"
-              />
-            </div>
+          <div className="flex flex-col md:flex-row items-center justify-between mt-12 gap-4">
+            <p className="text-2xl font-bold">AusBiz Consulting</p>
             <div className="flex items-center gap-6">
-              <Link href="#" className="text-sm text-gray-600 hover:text-black">
+              <Link href="#" className="text-sm text-gray-600 hover:text-primary">
                 Terms of use
               </Link>
-              <Link href="#" className="text-sm text-gray-600 hover:text-black">
+              <Link href="#" className="text-sm text-gray-600 hover:text-primary">
                 Privacy Policy
               </Link>
-              <Link href="https://linkedin.com" className="text-gray-600 hover:text-black">
+              <Link href="https://linkedin.com" className="text-gray-600 hover:text-primary">
                 <Linkedin className="w-6 h-6" />
               </Link>
             </div>
           </div>
 
           <p className="text-sm text-gray-600">
-            Copyright © 2022 AusBiz Consulting Pty Ltd - All Rights Reserved.
+            Copyright © {new Date().getFullYear()} AusBiz Consulting Pty Ltd - All Rights Reserved.
           </p>
         </div>
       </div>

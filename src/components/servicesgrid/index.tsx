@@ -13,35 +13,39 @@ interface Service {
 const services: Service[] = [
   {
     image:
-      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7fnSNA34bLSkx-zmfqAwr6AlSPMH96weZErYlBoaptyOXcdJ0dJ9Gb1_pbwTUtPdCg_w&usqp=CAU', // Can be replaced with URL
+      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSStvDOJBGMzID1RLGLMOizvzw36bJqRED_Zg&s', // Replace with your actual URL
     title: 'Cloud Strategy & AWS Solutions',
     description:
       'Our serverless solutions using AWS Lambda, API Gateway, and Amplify enhance scalability and reduce costs.',
     link: '#',
   },
   {
-    image: 'https://example.com/tech-transformation.jpg', // Example of URL image
+    image:
+      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTniW5B1LXQ5FH_rPyGcbPnRgLtua9EpPZYhg&s', // Replace with your actual URL
     title: 'Tech Transformation & Advisory',
     description:
       'We provide Business Analysis, Agile Project Management, and Change Management to ensure successful implementation',
     link: '#',
   },
   {
-    image: '/path-to-local-image-3.jpg', // Can be replaced with URL
+    image:
+      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlrnGuUY_jsOEPPvl93ha5BpCYj_siY7hu0Q&s', // Replace with your actual URL
     title: 'Full-Stack Development',
     description:
       'Create robust and scalable applications using React.js, Next.js 15, Vercel, and Prisma ORM',
     link: '#',
   },
   {
-    image: 'https://example.com/data-ai-solutions.jpg', // Example of URL image
+    image:
+      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRG1H5k3WoqgH0MlmwR87Th847ivrZZuKPzTg&s', // Replace with your actual URL
     title: 'Data & AI Solutions',
     description:
       'Leverage AI-Driven Analytics and Synthetic Data to boost machine learning capabilities while ensuring data privacy.',
     link: '#',
   },
   {
-    image: '/path-to-local-image-5.jpg', // Can be replaced with URL
+    image:
+      'https://innovationatwork.ieee.org/wp-content/uploads/2017/12/bigstock-203579284-1024x768.jpg', // Replace with your actual URL
     title: 'Cybersecurity',
     description:
       'We ensure compliance, mitigate data breaches, and reduce insurance premiums through robust security frameworks',
@@ -62,9 +66,10 @@ export default function ServicesGrid() {
                   <Image
                     src={service.image || '/placeholder.svg'}
                     alt={`${service.title} icon`}
-                    layout="fill"
-                    objectFit="cover"
-                    className="rounded-full"
+                    width={64}
+                    height={64}
+                    className="rounded-full object-cover"
+                    unoptimized
                   />
                 </div>
                 <h3 className="text-lg font-semibold leading-tight text-foreground">
