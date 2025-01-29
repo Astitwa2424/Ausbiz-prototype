@@ -1,0 +1,22 @@
+.formWrapper {
+    @apply space-y-6;
+  }
+  
+  .formWrapper :global(form) {
+    @apply space-y-4;
+  }
+  
+  .formWrapper :global(label) {
+    @apply block text-sm font-medium text-gray-700;
+  }
+  
+  .formWrapper :global(input),
+  .formWrapper :global(textarea) {
+    @apply mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500;
+  }
+  
+  .formWrapper :global(button[type="submit"]) {
+    @apply bg-black text-white px-4 py-2 rounded-md hover:bg-gray-800 transition-colors;
+  }
+  
+  
