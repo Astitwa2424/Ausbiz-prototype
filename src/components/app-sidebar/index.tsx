@@ -22,7 +22,7 @@ import { ThemeSelector } from 'src/providers/Theme/ThemeSelector'
 const items = [
   {
     title: 'Home',
-    url: 'https://ausbiz-prototype.vercel.app/home',
+    url: 'https://ausbiz-prototype.vercel.app/',
     icon: Home,
   },
   {
@@ -31,7 +31,7 @@ const items = [
     items: [
       {
         title: 'Company Profile',
-        url: 'https://ausbiz-prototype.vercel.app/about-ausbiz-consulting',
+        url: 'https://ausbiz-prototype.vercel.app/company-overview',
       },
       { title: 'Team', url: 'https://ausbiz-prototype.vercel.app/our-team' },
       { title: 'Academic Partners', url: 'https://ausbiz-prototype.vercel.app/academic-partners' },
