@@ -1,5 +1,6 @@
 import { MapPin, Clock } from 'lucide-react'
 import { Card } from '@/components/ui/card'
+import ContactForm from 'src/app/(frontend)/contact-us/contact-form'
 
 export default function ContactPage() {
   return (
@@ -10,16 +11,18 @@ export default function ContactPage() {
           <h1 className="text-4xl font-bold mb-6">Contact Us</h1>
           <p className="text-lg text-gray-600">
             At AusBiz Consulting, we value the opportunity to connect with corporate stakeholders
-            and businesses. Whether you're looking to move forward with an inquiry, schedule a
-            consultation, or explore how we can support your organization's goals, this page is your
-            direct line to us.
+            and businesses. Whether you&apos;re looking to move forward with an inquiry, schedule a
+            consultation, or explore how we can support your organization&apos;s goals, this page is
+            your direct line to us.
           </p>
         </div>
 
         {/* Main Content */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {/* Form Section - Left Column */}
-          <div>{/* Your existing Payload form will be rendered here */}</div>
+          <div>
+            <ContactForm />
+          </div>
 
           {/* Contact Details - Right Column */}
           <div>
@@ -51,7 +54,7 @@ export default function ContactPage() {
               <div className="mt-6">
                 <div className="w-full h-[300px] bg-gray-100 rounded-lg overflow-hidden">
                   <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26537.90346460229!2d151.20169635!3d-33.8688197!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12ae401e8b983f%3A0x5017d681632ccc0!2sSydney%20NSW%202000!5e0!3m2!1sen!2sau!4v1635825谷歌地图"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26537.90346460229!2d151.20169635!3d-33.8688197!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12ae401e8b983f%3A0x5017d681632ccc0!2sSydney%20NSW%202000!5e0!3m2!1sen!2sau!4v1635825"
                     width="100%"
                     height="100%"
                     style={{ border: 0 }}
