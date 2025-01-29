@@ -56,6 +56,10 @@
     --sidebar-accent-foreground: 240 5.9% 10%;
     --sidebar-border: 220 13% 91%;
     --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-width: 16rem;
+    --header-height: 4rem;
+    --transition-duration: 300ms;
+
   }
 
   [data-theme="dark"] {
@@ -120,3 +124,7 @@ html[data-theme="dark"] {
   opacity: initial;
 }
 
+.transition-sidebar {
+  transition: margin-left var(--transition-duration) ease-in-out, left var(--transition-duration) ease-in-out, width
+    var(--transition-duration) ease-in-out;
+}

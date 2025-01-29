@@ -6,14 +6,18 @@ import { GeistMono } from 'geist/font/mono'
 import { GeistSans } from 'geist/font/sans'
 import { AdminBar } from '@/components/AdminBar'
 import { Footer } from '@/Footer/Component'
-import { Header } from '@/Header/Component'
 import { Providers } from '@/providers'
 import { InitTheme } from '@/providers/Theme/InitTheme'
 import { mergeOpenGraph } from '@/utilities/mergeOpenGraph'
 import { getServerSideURL } from '@/utilities/getURL'
 import { SidebarProvider, SidebarTrigger } from '@/components/ui/sidebar'
 import { AppSidebar } from '@/components/app-sidebar'
+import { Banner } from '@/components/Banner/banner'
 import './globals.css'
+
+const MainContent = ({ children }: { children: React.ReactNode }) => {
+  return <>{children}</>
+}
 
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
   const { isEnabled } = await draftMode()
@@ -34,12 +38,14 @@ export default async function RootLayout({ children }: { children: React.ReactNo
           />
           <SidebarProvider>
             <AppSidebar />
-            <main>
-              <SidebarTrigger />
-              <Header />
-              {children}
+            <MainContent>
+              <Banner />
+              <main className="pt-20 px-6">
+                <SidebarTrigger />
+                {children}
+              </main>
               <Footer />
-            </main>
+            </MainContent>
           </SidebarProvider>
         </Providers>
       </body>
