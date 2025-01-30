@@ -20,7 +20,7 @@ export default function RemoteTrainingPage() {
   return (
     <div className="mx-4 lg:mx-auto max-w-6xl pb-12 relative">
       {/* Main Header Section */}
-      <div className="bg-[#1a1a1a] text-white rounded-full py-6 px-8 mb-12 text-center max-w-3xl mx-auto">
+      <div className="border rounded-full py-6 px-8 mb-12 text-center max-w-3xl mx-auto">
         <h1 className="text-2xl md:text-3xl font-bold">
           Remote Training: 1-Hour Weekly Sessions Over 6 Weeks
         </h1>
@@ -35,7 +35,7 @@ export default function RemoteTrainingPage() {
       <div className="grid md:grid-cols-2 gap-8 mb-12">
         {/* Left Column */}
         <div className="space-y-6">
-          <Card className="bg-[#1a1a1a] text-white border-none">
+          <Card className="border">
             <CardContent className="p-6 flex gap-4">
               <Calendar className="w-8 h-8 flex-shrink-0" />
               <div>
@@ -45,7 +45,7 @@ export default function RemoteTrainingPage() {
             </CardContent>
           </Card>
 
-          <Card className="bg-[#1a1a1a] text-white border-none">
+          <Card className="border">
             <CardContent className="p-6 flex gap-4">
               <Users className="w-8 h-8 flex-shrink-0" />
               <div>
@@ -57,30 +57,30 @@ export default function RemoteTrainingPage() {
         </div>
 
         {/* Right Column - Skills */}
-        <Card className="bg-white border-2">
+        <Card className="border">
           <CardContent className="p-6">
             <h2 className="text-2xl font-bold mb-4">Skills you&apos;ll learn</h2>
             <ul className="space-y-4">
               <li className="flex gap-2">
-                <ArrowRight className="w-5 h-5 flex-shrink-0 text-blue-600" />
+                <ArrowRight className="w-5 h-5 flex-shrink-0 text-primary" />
                 <span>
                   AWS Cloud Services: Serverless Architecture (Lambda, API Gateway, Amplify), Cost
                   Optimization, DevOps
                 </span>
               </li>
               <li className="flex gap-2">
-                <ArrowRight className="w-5 h-5 flex-shrink-0 text-blue-600" />
+                <ArrowRight className="w-5 h-5 flex-shrink-0 text-primary" />
                 <span>
                   Full-Stack Development: React 19, Next.js 15, Vercel, Prisma ORM, Resend,
                   shadcn/ui
                 </span>
               </li>
               <li className="flex gap-2">
-                <ArrowRight className="w-5 h-5 flex-shrink-0 text-blue-600" />
+                <ArrowRight className="w-5 h-5 flex-shrink-0 text-primary" />
                 <span>Generative AI & Synthetic Data</span>
               </li>
               <li className="flex gap-2">
-                <ArrowRight className="w-5 h-5 flex-shrink-0 text-blue-600" />
+                <ArrowRight className="w-5 h-5 flex-shrink-0 text-primary" />
                 <span>Cybersecurity: Compliance, Data Breaches, Insurance Premium Reduction</span>
               </li>
             </ul>
@@ -89,14 +89,14 @@ export default function RemoteTrainingPage() {
       </div>
 
       {/* Contact Section */}
-      <Card className="bg-[#1a1a1a] text-white border-none">
+      <Card className="border">
         <CardContent className="p-8 text-center">
           <h2 className="text-2xl font-bold mb-4">Have Questions?</h2>
           <p className="mb-6 text-lg">
             Contact us to explore tailored training solutions designed for your organization&apos;s
             unique needs.
           </p>
-          <Button asChild size="lg" className="bg-white text-black hover:bg-gray-100">
+          <Button asChild size="lg">
             <Link href="https://ausbiz-prototype.vercel.app/contact-us">Contact Us</Link>
           </Button>
         </CardContent>

@@ -1,4 +1,3 @@
-import Link from 'next/link'
 import { CheckCircle } from 'lucide-react'
 
 const serviceData = [
@@ -62,12 +61,16 @@ const serviceData = [
 export function Services() {
   return (
     <div className="container mx-auto px-4 py-16">
+      <div className="mb-12 text-center">
+        <div className="inline-block rounded-lg bg-gradient-to-r from-gray-900 to-gray-800 px-8 py-4">
+          <h1 className="text-3xl font-bold text-white md:text-4xl">Our Services</h1>
+        </div>
+      </div>
       <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
         {serviceData.map((service, index) => (
-          <Link
+          <div
             key={index}
-            href={`/services/${service.title.toLowerCase().replace(/\s+/g, '-')}`}
-            className="group relative overflow-hidden rounded-lg bg-gradient-to-b from-gray-900 to-gray-800 p-6 transition-all duration-300 hover:scale-105 hover:shadow-xl"
+            className="group relative cursor-pointer overflow-hidden rounded-lg bg-gradient-to-b from-gray-900 to-gray-800 p-6 transition-all duration-300 hover:scale-105 hover:shadow-xl"
           >
             <div className="space-y-4">
               <h2 className="text-xl font-bold text-white md:text-2xl">{service.title}</h2>
@@ -86,7 +89,7 @@ export function Services() {
               </ul>
             </div>
             <div className="absolute inset-0 border-2 border-transparent opacity-0 transition-all duration-300 group-hover:border-primary group-hover:opacity-100" />
-          </Link>
+          </div>
         ))}
       </div>
     </div>

@@ -12,7 +12,6 @@ import { mergeOpenGraph } from '@/utilities/mergeOpenGraph'
 import { getServerSideURL } from '@/utilities/getURL'
 import { SidebarProvider, SidebarTrigger } from '@/components/ui/sidebar'
 import { AppSidebar } from '@/components/app-sidebar'
-import { Banner } from '@/components/Banner/banner'
 import './globals.css'
 
 const MainContent = ({ children }: { children: React.ReactNode }) => {
@@ -39,7 +38,6 @@ export default async function RootLayout({ children }: { children: React.ReactNo
           <SidebarProvider>
             <AppSidebar />
             <MainContent>
-              <Banner />
               <main className="pt-20 px-6">
                 <SidebarTrigger />
                 {children}

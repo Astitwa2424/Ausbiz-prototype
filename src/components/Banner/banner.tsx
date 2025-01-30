@@ -1,34 +1,17 @@
-'use client'
-
-import React from 'react'
-import Link from 'next/link'
-import { useSidebar } from '@/components/ui/sidebar'
-
-export const Banner = () => {
-  const { state } = useSidebar()
-
+export function Banner() {
   return (
-    <div
-      className={`fixed top-0 z-50 bg-white border-b border-gray-200 py-4 px-6 transition-all duration-300 ease-in-out
-        ${state === 'expanded' ? 'left-[var(--sidebar-width)]' : 'left-0'}
-        right-0`}
-    >
-      <div className="flex justify-between items-center">
-        {/* Logo and Text */}
-        <div className="flex items-center">
-          <h1 className="text-3xl font-bold">
-            <span className="text-4xl font-extrabold text-red-600 block">Aus Biz</span>
-            <span className="text-3xl font-light text-black block">Consulting</span>
+    <div className="relative w-full py-12 md:py-16 lg:py-20 border-b">
+      <div className="container mx-auto px-4">
+        <div className="text-center">
+          <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold tracking-wider mb-4">
+            AUZBIZ CONSULTING
           </h1>
+          <div className="mx-auto h-0.5 w-32 bg-primary mb-4" />
+          <p className="text-sm md:text-base lg:text-xl max-w-3xl mx-auto">
+            We provide mission-critical IT services that transform Governments and Enterprise
+            Clients.
+          </p>
         </div>
-
-        {/* Contact Button */}
-        <Link
-          href="https://ausbiz-prototype.vercel.app/contact-us"
-          className="bg-black text-white px-6 py-2 rounded-md hover:bg-gray-800 transition-colors"
-        >
-          Contact Us
-        </Link>
       </div>
     </div>
   )
