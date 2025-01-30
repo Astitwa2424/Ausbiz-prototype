@@ -3,7 +3,7 @@ import { mergeOpenGraph } from '@/utilities/mergeOpenGraph'
 import { Card, CardContent } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import Link from 'next/link'
-import { Calendar, Users, BookOpen, ArrowRight } from 'lucide-react'
+import { Calendar, Users, ArrowRight } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Remote Training | AusBiz Consulting',
@@ -59,7 +59,7 @@ export default function RemoteTrainingPage() {
         {/* Right Column - Skills */}
         <Card className="bg-white border-2">
           <CardContent className="p-6">
-            <h2 className="text-2xl font-bold mb-4">Skills you'll learn</h2>
+            <h2 className="text-2xl font-bold mb-4">Skills you&apos;ll learn</h2>
             <ul className="space-y-4">
               <li className="flex gap-2">
                 <ArrowRight className="w-5 h-5 flex-shrink-0 text-blue-600" />
@@ -93,7 +93,7 @@ export default function RemoteTrainingPage() {
         <CardContent className="p-8 text-center">
           <h2 className="text-2xl font-bold mb-4">Have Questions?</h2>
           <p className="mb-6 text-lg">
-            Contact us to explore tailored training solutions designed for your organization's
+            Contact us to explore tailored training solutions designed for your organization&apos;s
             unique needs.
           </p>
           <Button asChild size="lg" className="bg-white text-black hover:bg-gray-100">

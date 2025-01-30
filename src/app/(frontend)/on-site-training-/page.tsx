@@ -61,7 +61,7 @@ export default function OnSiteTrainingPage() {
         {/* Right Column - Skills */}
         <Card className="bg-white border-2">
           <CardContent className="p-6">
-            <h2 className="text-2xl font-bold mb-4">Skills you'll learn</h2>
+            <h2 className="text-2xl font-bold mb-4">Skills you&apos;ll learn</h2>
             <ul className="space-y-4">
               <li className="flex gap-2">
                 <ArrowRight className="w-5 h-5 flex-shrink-0 text-blue-600" />
@@ -95,7 +95,7 @@ export default function OnSiteTrainingPage() {
         <CardContent className="p-8 text-center">
           <h2 className="text-2xl font-bold mb-4">Have Questions?</h2>
           <p className="mb-6 text-lg">
-            Contact us to explore tailored training solutions designed for your organization's
+            Contact us to explore tailored training solutions designed for your organization&apos;s
             unique needs.
           </p>
           <Button asChild size="lg" className="bg-white text-black hover:bg-gray-100">
